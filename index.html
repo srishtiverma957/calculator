@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .r1 {
+        display: flex;
+        background-color: gray;
+      }
+      .m1 {
+        background: red;
+        color: white;
+      }
+    </style>
+    <script>
+      const fun1 = (x) => {
+        document.getElementById("d1").innerHTML += x;
+      };
+      const fun2 = () => {
+        var r = eval(document.getElementById("d1").innerHTML);
+        document.getElementById("d1").innerHTML = r;
+      };
+      const fun3 = () => {
+        document.getElementById("d1").innerHTML = "";
+      };
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="4"><div id="d1" class="r1"></div></td>
+      </tr>
+      <br />
+      <tr>
+        <td><button class="m1" onclick="fun1(1)">1</button></td>
+        <td><button class="m1" onclick="fun1(2)">2</button></td>
+        <td><button class="m1" onclick="fun1(3)">3</button></td>
+        <td><button class="m1" onclick="fun3()">c</button></td>
+      </tr>
+      <tr>
+        <td><button class="m1" onclick="fun1(4)">4</button></td>
+        <td><button class="m1" onclick="fun1(5)">5</button></td>
+        <td><button class="m1" onclick="fun1(6)">6</button></td>
+        <td><button class="m1" onclick="fun1('+')">+</button></td>
+      </tr>
+      <tr>
+        <td><button class="m1" onclick="fun1(1)">7</button></td>
+        <td><button class="m1" onclick="fun1(1)">8</button></td>
+        <td><button class="m1" onclick="fun1(1)">9</button></td>
+        <td><button class="m1" onclick="fun1('-')">-</button></td>
+      </tr>
+      <tr>
+        <td><button class="m1" onclick="fun1(1)">0</button></td>
+        <td><button class="m1" onclick="fun1(1)">/</button></td>
+        <td><button class="m1" onclick="fun1(1)">*</button></td>
+        <td><button class="m1" onclick="fun2()">=</button></td>
+      </tr>
+    </table>
+  </body>
+</html>
